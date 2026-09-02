@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Holiday Packages</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<nav>
+    <h2>Travel Agency</h2>
+
+    <div>
+        <a href="/">Home</a>
+        <a href="/packages">Packages</a>
+        <a href="/bookings">Bookings</a>
+    </div>
+</nav>
+
+<div class="container">
+
+    <h1>Holiday Packages</h1>
+
+    <div class="package-container">
+
+        {% for package in packages %}
+
+        <div class="package-card">
+
+            <h2>{{ package["package_name"] }}</h2>
+
+            <p>
+                <strong>Destination:</strong>
+                {{ package["destination"] }}
+            </p>
+
+            <p>
+                <strong>Duration:</strong>
+                {{ package["duration"] }} Days
+            </p>
+
+            <p>
+                <strong>Price:</strong>
+                ₹{{ package["price"] }}
+            </p>
+
+            <p>
+                <strong>Available Seats:</strong>
+                {{ package["available_seats"] }}
+            </p>
+
+            {% if package["available_seats"] > 0 %}
+
+            <a class="btn"
+               href="/book/{{ package['package_id'] }}">
+                Book Now
+            </a>
+
+            {% else %}
+
+            <button disabled>
+                Fully Booked
+            </button>
+
+            {% endif %}
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+</body>
+</html>

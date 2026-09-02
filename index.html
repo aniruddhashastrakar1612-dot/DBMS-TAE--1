@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Agency Booking System</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<nav>
+    <h2>Travel Agency</h2>
+
+    <div>
+        <a href="/">Home</a>
+        <a href="/packages">Packages</a>
+        <a href="/bookings">Bookings</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>Explore The World</h1>
+
+    <p>
+        Find your perfect holiday package and book your trip easily.
+    </p>
+
+    <a class="btn" href="/packages">
+        View Holiday Packages
+    </a>
+</section>
+
+<section class="info">
+
+    <div class="card">
+        <h3>Holiday Packages</h3>
+        <p>Choose from different destinations and packages.</p>
+    </div>
+
+    <div class="card">
+        <h3>Date Availability</h3>
+        <p>Check available seats before booking your trip.</p>
+    </div>
+
+    <div class="card">
+        <h3>Easy Booking</h3>
+        <p>Fill in the booking form to reserve your holiday.</p>
+    </div>
+
+</section>
+
+</body>
+</html>

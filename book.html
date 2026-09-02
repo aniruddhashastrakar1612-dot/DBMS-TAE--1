@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Package</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<nav>
+    <h2>Travel Agency</h2>
+
+    <div>
+        <a href="/">Home</a>
+        <a href="/packages">Packages</a>
+        <a href="/bookings">Bookings</a>
+    </div>
+</nav>
+
+<div class="form-container">
+
+    <h1>Book Your Holiday</h1>
+
+    <div class="selected-package">
+
+        <h2>{{ package["package_name"] }}</h2>
+
+        <p>
+            Destination:
+            {{ package["destination"] }}
+        </p>
+
+        <p>
+            Price per person:
+            ₹{{ package["price"] }}
+        </p>
+
+        <p>
+            Available seats:
+            {{ package["available_seats"] }}
+        </p>
+
+    </div>
+
+    <form method="POST">
+
+        <label>Customer Name</label>
+
+        <input type="text"
+               name="customer_name"
+               required>
+
+        <label>Email</label>
+
+        <input type="email"
+               name="email"
+               required>
+
+        <label>Travel Date</label>
+
+        <input type="date"
+               name="travel_date"
+               min="{{ today }}"
+               required>
+
+        <label>Number of Persons</label>
+
+        <input type="number"
+               name="persons"
+               min="1"
+               max="{{ package['available_seats'] }}"
+               required>
+
+        <button type="submit">
+            Confirm Booking
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

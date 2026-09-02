@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bookings</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<nav>
+    <h2>Travel Agency</h2>
+
+    <div>
+        <a href="/">Home</a>
+        <a href="/packages">Packages</a>
+        <a href="/bookings">Bookings</a>
+    </div>
+</nav>
+
+<div class="container">
+
+    <h1>Booking Records</h1>
+
+    {% if bookings %}
+
+    <table>
+
+        <tr>
+            <th>ID</th>
+            <th>Customer</th>
+            <th>Package</th>
+            <th>Destination</th>
+            <th>Travel Date</th>
+            <th>Persons</th>
+            <th>Total Price</th>
+        </tr>
+
+        {% for booking in bookings %}
+
+        <tr>
+            <td>{{ booking["booking_id"] }}</td>
+
+            <td>
+                {{ booking["customer_name"] }}
+            </td>
+
+            <td>
+                {{ booking["package_name"] }}
+            </td>
+
+            <td>
+                {{ booking["destination"] }}
+            </td>
+
+            <td>
+                {{ booking["travel_date"] }}
+            </td>
+
+            <td>
+                {{ booking["persons"] }}
+            </td>
+
+            <td>
+                ₹{{ booking["price"] * booking["persons"] }}
+            </td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+    {% else %}
+
+    <p class="no-booking">
+        No bookings available.
+    </p>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #333;
+}
+
+nav {
+    background: #173f5f;
+    color: white;
+    padding: 15px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: #dceef7;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn,
+button {
+    display: inline-block;
+    background: #f28c28;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:disabled {
+    background: #999;
+    cursor: not-allowed;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 50px;
+}
+
+.card {
+    background: white;
+    width: 280px;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #ccc;
+}
+
+.container {
+    width: 90%;
+    margin: 40px auto;
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.package-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.package-card {
+    background: white;
+    width: 280px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #ccc;
+}
+
+.package-card h2 {
+    color: #173f5f;
+}
+
+.form-container {
+    background: white;
+    width: 500px;
+    max-width: 90%;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #ccc;
+}
+
+.form-container h1 {
+    text-align: center;
+}
+
+.selected-package {
+    background: #eef5f9;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 6px;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+}
+
+form button {
+    margin-top: 25px;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+table th,
+table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+table th {
+    background: #173f5f;
+    color: white;
+}
+
+.success {
+    width: 500px;
+    max-width: 90%;
+    margin: 150px auto;
+    padding: 40px;
+    background: white;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #ccc;
+}
+
+.success h1 {
+    color: #198754;
+}
+
+.success .btn {
+    margin: 10px;
+}
+
+.no-booking {
+    text-align: center;
+    font-size: 20px;
+}
